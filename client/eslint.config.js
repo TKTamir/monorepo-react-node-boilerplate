@@ -1,38 +1,33 @@
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import eslintPlugin from '@typescript-eslint/eslint-plugin'
-import eslintParser from '@typescript-eslint/parser'
-import prettier from 'eslint-config-prettier'
+import baseConfig from "../eslint.config.js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
 
 export default {
-  ignores: ['dist', 'node_modules', '.vite'],
-  files: ['**/*.{ts,tsx}'],
+  ...baseConfig,
+  ignores: [...baseConfig.ignores, ".vite"],
+  files: ["**/*.{ts,tsx}"],
   languageOptions: {
-    ecmaVersion: 'latest',
+    ...baseConfig.languageOptions,
     globals: { ...globals.browser, ...globals.node },
-    parser: eslintParser,
-    sourceType: 'module',
-    project: './tsconfig.json',
+    project: "./tsconfig.json",
   },
   plugins: {
-    '@typescript-eslint': eslintPlugin,
-    'react-hooks': reactHooks,
-    'react-refresh': reactRefresh,
+    ...baseConfig.plugins,
+    "react-hooks": reactHooks,
+    "react-refresh": reactRefresh,
   },
-  extends: [eslintPlugin.configs.recommended, reactHooks.configs.recommended, prettier],
+  extends: [...baseConfig.extends, reactHooks.configs.recommended],
   rules: {
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/prefer-optional-chain': 'warn',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'react/prop-types': 'off',
+    "react-refresh/only-export-components": [
+      "warn",
+      { allowConstantExport: true },
+    ],
+    "react/prop-types": "off",
   },
   settings: {
     react: {
-      version: 'detect',
+      version: "detect",
     },
   },
-}
+};
