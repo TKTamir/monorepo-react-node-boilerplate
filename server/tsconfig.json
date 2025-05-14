@@ -1,24 +1,12 @@
 {
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["ESNext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "resolveJsonModule": true,
+    "allowJs": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["*"]
-    },
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
+    "baseUrl": "./src"
   },
   "include": ["src"]
 }
