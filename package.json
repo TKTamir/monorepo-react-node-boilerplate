@@ -1,0 +1,14 @@
+{
+  "name": "monorepo-react-node-boilerplate",
+  "version": "1.0.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tamir Kahalany",
+  "license": "ISC",
+  "type": "commonjs"
+}
