@@ -19,7 +19,6 @@ export default [
       "@typescript-eslint": eslintPlugin,
     },
     rules: {
-      ...eslintPlugin.configs.recommended.rules,
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/prefer-optional-chain": "warn",
