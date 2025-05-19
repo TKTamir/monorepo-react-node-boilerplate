@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "nodemon src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "lint": "eslint  --ext ts --report-unused-disable-directives --max-warnings 0",
@@ -29,6 +29,6 @@
     "@types/node": "^22.15.17",
     "eslint-plugin-node": "^11.1.0",
     "nodemon": "^3.1.10",
-    "ts-node": "^10.9.2"
+    "tsx": "^4.19.4"
   }
 }
