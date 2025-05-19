@@ -12,8 +12,8 @@
     "noImplicitOverride": true,
     "baseUrl": "./",
     "paths": {
-      "@client/*": ["client/src/*"],
-      "@server/*": ["server/src/*"]
+      "@client/*": ["apps/client/src/*"],
+      "@server/*": ["apps/server/src/*"]
     }
   }
 }

@@ -2,8 +2,8 @@
   "name": "monorepo-react-node-boilerplate",
   "version": "1.0.0",
   "workspaces": [
-    "client",
-    "server"
+    "apps/client",
+    "apps/server"
   ],
   "scripts": {
     "client:dev": "cd apps/client && npm run dev",
